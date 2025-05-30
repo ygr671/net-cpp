@@ -4,6 +4,11 @@ cmake_minimum_required(VERSION 3.10)
 set(EXECUTABLE_NAME net-cpp)
 project(${EXECUTABLE_NAME})
 
+# C++ Standard
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # Gather source and header files
 file(GLOB SRCS src/*.cpp)
 file(GLOB HEADERS src/include/*.hpp)
