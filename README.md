@@ -1,2 +1,2 @@
-# C++ Project Template
-
+# Net-CPP
+Net-CPP, network simulation written in C++

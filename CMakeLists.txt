@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the name of the executable
-set(EXECUTABLE_NAME cpp-project-template)
+set(EXECUTABLE_NAME net-cpp)
 project(${EXECUTABLE_NAME})
 
 # Gather source and header files
