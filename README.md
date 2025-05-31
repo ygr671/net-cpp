@@ -2,9 +2,9 @@
 Net-CPP, network simulation written in C++
 
 # Features
-- [ ] : Representing IP Addresses
-- [ ] : Representing MAC Addresses
-- [ ] : Representing Nodes
+- [x] : Representing IP Addresses
+- [x] : Representing MAC Addresses
+- [x] : Representing Nodes
 
 # TODO
-- [ ] : Add network mask in IP Class
+- [x] : Add network mask in IP Class

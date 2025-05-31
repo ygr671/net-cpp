@@ -15,7 +15,7 @@ private:
 
 public:
   // Ctor
-  Node(const std::string& ip, const std::string& mac, const std::string& name);
+  Node(const std::string& ip, const std::string& mask, const std::string& mac, const std::string& name);
   
   // Dtor
   virtual ~Node() = default;

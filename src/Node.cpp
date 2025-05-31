@@ -29,7 +29,7 @@ public:
 };
 */
 
-Node::Node(const std::string& ip, const std::string& mac, const std::string& name) : m_ip(ip), m_mac(mac), m_name(name) 
+Node::Node(const std::string& ip, const std::string& mask, const std::string& mac, const std::string& name) : m_ip(ip, mask), m_mac(mac), m_name(name) 
 {
   if (m_name.length() == 0)
     throw std::runtime_error("Name cannot be empty !");
@@ -63,5 +63,5 @@ std::ostream& operator<<(std::ostream& os, const Node& node)
 
 std::string Node::to_string()
 {
-  return "Node(name : " + this->getName() + ", IP : " + this->getIP().to_string() + ", MAC : " + this->getMAC().to_string() + ")";
+  return "Node(\n\tname : " + this->getName() + ", \n\tIP : " + this->getIP().to_string() + ", \n\tMAC : " + this->getMAC().to_string() + "\n)";
 }
