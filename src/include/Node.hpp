@@ -1,6 +1,8 @@
 #pragma once
 
+#include <exception>
 #include <string>
+#include <iosfwd>
 #include "IP.hpp"
 #include "MAC.hpp"
 
@@ -23,4 +25,5 @@ public:
   const std::string& getName() const;
   bool operator==(const Node& other) const;
   friend std::ostream& operator<<(std::ostream& os, const Node& node);
+  std::string to_string();
 };

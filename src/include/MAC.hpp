@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <iostream>
+#include <iosfwd>
 
 class MAC
 {
@@ -13,6 +13,7 @@ public:
 
   const std::string& get() const;
   bool operator==(const MAC& other) const;
+  std::string to_string() const;
 };
 
 std::ostream& operator<<(std::ostream& os, const MAC& mac);

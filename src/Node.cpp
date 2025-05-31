@@ -1,5 +1,6 @@
-#include <exception>
+#include <stdexcept>
 #include <string>
+#include <iostream>
 
 #include "include/Node.hpp"
 #include "include/IP.hpp"
@@ -56,5 +57,11 @@ bool Node::operator==(const Node& other) const
 
 std::ostream& operator<<(std::ostream& os, const Node& node)
 {
-  return os << "Node(name : ) " << node.getName() << ", IP : " << node.getIP() << ", MAC : " << node.getMAC() << ")";
+  os << "Node : \n\tname : " << node.getName() << ",\n\tIP : " << node.getIP() << ",\n\tMAC : " << node.getMAC();
+  return os;
+}
+
+std::string Node::to_string()
+{
+  return "Node(name : " + this->getName() + ", IP : " + this->getIP().to_string() + ", MAC : " + this->getMAC().to_string() + ")";
 }

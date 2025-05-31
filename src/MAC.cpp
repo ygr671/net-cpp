@@ -32,4 +32,7 @@ bool MAC::operator==(const MAC& other) const
   return address == other.get();
 }
 
-
+std::string MAC::to_string() const
+{
+  return "MAC(address : " + address + ")";
+}

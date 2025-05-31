@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <iostream>
+#include <iosfwd>
 
 class IP 
 {
@@ -13,6 +13,7 @@ public:
 
   const std::string& get() const;
   bool operator==(const IP& other) const;
+  std::string to_string() const;
 };
 
 std::ostream& operator<<(std::ostream& os, const IP& ip);

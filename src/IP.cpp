@@ -30,3 +30,7 @@ bool IP::operator==(const IP& other) const
   return address == other.get();
 }
 
+std::string IP::to_string() const
+{
+  return "IP(address : " + address + ")";
+}
