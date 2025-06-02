@@ -9,9 +9,11 @@
 class Node
 {
 private:
-  IP m_ip;
-  MAC m_mac; 
-  std::string m_name;
+  static unsigned short node_count_;
+  unsigned short id_;
+  IP ip_;
+  MAC mac_; 
+  std::string name_;
 
 public:
   // Ctor
@@ -20,6 +22,7 @@ public:
   // Dtor
   virtual ~Node() = default;
 
+  const unsigned short getID() const;
   const IP& getIP() const;
   const MAC& getMAC() const;
   const std::string& getName() const;

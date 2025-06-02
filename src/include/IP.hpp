@@ -6,8 +6,8 @@
 class IP 
 {
 private:
-  std::string m_address;
-  std::string m_mask;
+  std::string address_;
+  std::string mask_;
 public:
   // Ctor
   IP(const std::string& addr, const std::string& mask);

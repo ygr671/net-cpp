@@ -6,5 +6,7 @@
 
 int main(void)
 {
+  Node pc1("1.1.1.1", "24", "AA:BB:CC:DD:EE:FF","PC1");
+  std::cout << pc1 << "\n";
   return 0;
 }

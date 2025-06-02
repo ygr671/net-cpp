@@ -6,7 +6,7 @@
 class MAC
 {
 private:
-  std::string address;
+  std::string address_;
 public:
   // Ctor
   MAC(const std::string& addr);

@@ -4,7 +4,7 @@
 #include <exception>
 #include <regex>
 
-MAC::MAC(const std::string& addr) : address(addr) 
+MAC::MAC(const std::string& addr) : address_(addr) 
 {
   if (addr.length() == 0)
     throw std::runtime_error("MAC Address cannot be empty !");
@@ -24,15 +24,15 @@ std::ostream& operator<<(std::ostream& os, const MAC& mac)
 
 const std::string& MAC::get() const
 {
-  return address;
+  return address_;
 }
 
 bool MAC::operator==(const MAC& other) const
 {
-  return address == other.get();
+  return address_ == other.get();
 }
 
 std::string MAC::to_string() const
 {
-  return "MAC(address : " + address + ")";
+  return "MAC(address_ : " + address_ + ")";
 }

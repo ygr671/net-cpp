@@ -4,7 +4,7 @@
 #include <exception>
 #include <regex>
 
-IP::IP(const std::string& addr, const std::string& mask) : m_address(addr), m_mask(mask) 
+IP::IP(const std::string& addr, const std::string& mask) : address_(addr), mask_(mask) 
 {
   if (addr.empty())
     throw std::runtime_error("IP Address cannot be empty !");
@@ -29,25 +29,25 @@ std::ostream& operator<<(std::ostream& os, const IP& ip)
 
 std::string IP::get() const
 {
-  return m_address + "/" + m_mask;
+  return address_ + "/" + mask_;
 }
 
 const std::string& IP::getAddress() const
 {
-  return m_address;
+  return address_;
 }
 
 const std::string& IP::getMask() const
 {
-  return m_mask;
+  return mask_;
 }
 
 bool IP::operator==(const IP& other) const
 {
-  return m_address == other.getAddress() && m_mask == other.getMask();
+  return address_ == other.getAddress() && mask_ == other.getMask();
 }
 
 std::string IP::to_string() const
 {
-  return "IP(\n\tm_address : " + m_address + ",\n\tm_mask : " + m_mask + "\n)";
+  return "IP(\n\taddress_ : " + address_ + ",\n\tmask_ : " + mask_ + "\n)";
 }
