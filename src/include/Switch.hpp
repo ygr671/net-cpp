@@ -5,5 +5,4 @@
 
 class Switch : Node
 {
-private:
 };

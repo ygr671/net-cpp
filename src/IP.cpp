@@ -49,5 +49,5 @@ bool IP::operator==(const IP& other) const
 
 std::string IP::to_string() const
 {
-  return "IP(\n\taddress_ : " + address_ + ",\n\tmask_ : " + mask_ + "\n)";
+  return "IP(address_ : " + address_ + ",mask_ : " + mask_ + ")";
 }
