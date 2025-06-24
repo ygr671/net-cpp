@@ -8,7 +8,7 @@
 
 class Node
 {
-private:
+protected:
   MAC mac_;
   std::string name_;
 
