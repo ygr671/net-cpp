@@ -14,12 +14,19 @@ void Station::setIP(const IP &ip)
   ip_ = ip;
 }
 
-const std::string Station::getName() const override
+/*
+const std::string& Node::getName() const 
 {
-  return name_
+  return name_;
 }
+*/
 
 bool Station::operator==(const Station &other) const
 {
-  return Station::getIP() == other.getIP() && Station::getMAC() == other.getMAC() && Station::getName() && other.getName() 
+  return getIP() == other.getIP() && getMAC() == other.getMAC() && getName() == other.getName();
+}
+
+std::string Station::to_string() const
+{
+  return "Station(\n\tName : " + getName() + ",\n\tMAC : " + getMAC().to_string() + ",\n\tIP : " + getIP().to_string() + "\n)";
 }
