@@ -34,20 +34,15 @@ int main()
   */
   
 
-  /*
-  SwitchingTableEntry entry_same("AA:BB:CC:DD:EE:FF", "192.168.1.0", "24");
-  SwitchingTableEntry entry_different("AA:BB:CC:DD:EE:FF", "192.168.1.0", "24");
+  SwitchingTableEntry entry1("AA:BB:CC:DD:EE:FF", "192.168.1.1", "24");
+  SwitchingTableEntry entry2("AA:BB:CC:DD:EE:FF", "192.168.1.1", "23");
 
-  SwitchingTableEntry entry("AA:BB:CC:DD:EE:FF", "192.168.1.0", "23");
-
-  std::cout << ((entry_same == entry) ? "Pareil" : "Pas pareil") << "\n"; // Pas pareil 
-  std::cout << ((entry_same == entry_different) ? "Pareil" : "Pas pareil") << "\n"; // Pas pareil 
-  */
+  SwitchingTableEntry entry3("AA:BB:CC:DD:EE:FF", "192.168.1.1", "24");
+  SwitchingTableEntry entry4("AA:BB:CC:DD:EE:EE", "192.168.1.2", "24");
   
-  IP ip1("192.168.1.1", "24");
-  IP ip2("192.168.1.1", "23"); 
-  
-  std::cout << ((ip1 == ip2) ? "Same" : "Different") << "\n";
 
+  std::cout << ((entry1 == entry2) ? "Same" : "Different") << "\n";
+  std::cout << ((entry3 == entry4) ? "Same" : "Different") << "\n";
+  std::cout << ((entry1 == entry1) ? "Same" : "Different") << "\n";
   return 0;
 }
