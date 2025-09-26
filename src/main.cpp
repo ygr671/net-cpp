@@ -33,24 +33,21 @@ int main()
   }
   */
   
-  std::vector<SwitchingTableEntry> entries;
 
-  for (size_t i = 0 ; i < 5 ; i++)
-  {
-    entries.push_back(SwitchingTableEntry("AA:BB:CC:DD:EE:FF", "192.168.1." + std::to_string(i), "24"));
-  }
+  /*
+  SwitchingTableEntry entry_same("AA:BB:CC:DD:EE:FF", "192.168.1.0", "24");
+  SwitchingTableEntry entry_different("AA:BB:CC:DD:EE:FF", "192.168.1.0", "24");
 
+  SwitchingTableEntry entry("AA:BB:CC:DD:EE:FF", "192.168.1.0", "23");
 
-  for (const SwitchingTableEntry& entry : entries)
-  {
-    std::cout << entry.to_string() << "\n";
-  }
-
-  SwitchingTableEntry entry("AA:BB:CC:DD:EE:FF", "192.168.1.0", "24");
-
-  std::cout << ((entries[0] == entries[1]) ? "Pareil" : "Pas pareil") << "\n";
-  std::cout << ((entries[0] == entries[0]) ? "Pareil" : "Pas pareil") << "\n";
-  std::cout << ((entries[0] == entry) ? "Pareil" : "Pas pareil") << "\n";
+  std::cout << ((entry_same == entry) ? "Pareil" : "Pas pareil") << "\n"; // Pas pareil 
+  std::cout << ((entry_same == entry_different) ? "Pareil" : "Pas pareil") << "\n"; // Pas pareil 
+  */
+  
+  IP ip1("192.168.1.1", "24");
+  IP ip2("192.168.1.1", "23"); 
+  
+  std::cout << ((ip1 == ip2) ? "Same" : "Different") << "\n";
 
   return 0;
 }
