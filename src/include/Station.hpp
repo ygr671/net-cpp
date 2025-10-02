@@ -12,10 +12,10 @@ public:
   // Dtor
   ~Station() = default;
 
-  const IP& getIP() const;
-  void setIP(const IP& ip);
-  const MAC& getMAC() const override;
-  const std::string& getName() const override;
+  const IP& get_ip() const;
+  void set_ip(const IP& ip);
+  const MAC& get_mac() const override;
+  const std::string& get_name() const override;
   bool operator==(const Station& other) const;
   friend std::ostream& operator<<(std::ostream& os, const Station& station);
   std::string to_string() const override;

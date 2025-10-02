@@ -12,12 +12,12 @@ Node::Node(const std::string& mac, const std::string& name) : mac_(mac), name_(n
     throw std::runtime_error("Name cannot be empty !");
 };
 
-const MAC& Node::getMAC() const
+const MAC& Node::get_mac() const
 {
   return mac_;
 }
 
-const std::string& Node::getName() const
+const std::string& Node::get_name() const
 {
   return name_;
 }

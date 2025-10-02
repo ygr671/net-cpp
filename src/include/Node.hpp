@@ -19,8 +19,8 @@ public:
   // Dtor
   virtual ~Node() = default;
 
-  virtual const MAC& getMAC() const = 0;
-  virtual const std::string& getName() const = 0;
+  virtual const MAC& get_mac() const = 0;
+  virtual const std::string& get_name() const = 0;
   bool operator==(const Node& other);
   // friend std::ostream& operator<<(std::ostream& os, const Node& node);
   virtual std::string to_string() const = 0;

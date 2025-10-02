@@ -23,7 +23,7 @@ IP::IP(const std::string& addr, const std::string& mask) : address_(addr), mask_
 
 std::ostream& operator<<(std::ostream& os, const IP& ip) 
 {
-  os << ip.getAddress() << "/" << ip.getMask();
+  os << ip.get_address() << "/" << ip.get_mask();
   return os;
 }
 
@@ -32,19 +32,19 @@ std::string IP::get() const
   return address_ + "/" + mask_;
 }
 
-const std::string& IP::getAddress() const
+const std::string& IP::get_address() const
 {
   return address_;
 }
 
-const std::string& IP::getMask() const
+const std::string& IP::get_mask() const
 {
   return mask_;
 }
 
 bool IP::operator==(const IP& other) const
 {
-  return address_ == other.getAddress() && mask_ == other.getMask();
+  return address_ == other.get_address() && mask_ == other.get_mask();
 }
 
 std::string IP::to_string() const

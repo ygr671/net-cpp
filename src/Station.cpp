@@ -4,12 +4,12 @@
 Station::Station(const std::string &mac, const std::string &name,
                  const std::string &address, const std::string &mask) : Node(mac, name), ip_(IP(address, mask)) {};
 
-const IP& Station::getIP() const
+const IP& Station::get_ip() const
 {
   return ip_;
 }
 
-void Station::setIP(const IP &ip)
+void Station::set_ip(const IP &ip)
 {
   ip_ = ip;
 }
@@ -21,28 +21,28 @@ const std::string& Node::getName() const
 }
 */ 
 
-const MAC& Station::getMAC() const 
+const MAC& Station::get_mac() const 
 {
   return mac_;
 }
 
-const std::string& Station::getName() const
+const std::string& Station::get_name() const
 {
   return name_;
 }
 
 std::ostream& operator<<(std::ostream& os, const Station& station)
 {
-  os << "Station : \n\tName : " << station.getName() << ",\n\tMAC : " << station.getMAC() << ",\n\tIP : " << station.getIP();
+  os << "Station : \n\tName : " << station.get_name() << ",\n\tMAC : " << station.get_mac() << ",\n\tIP : " << station.get_ip();
   return os;
 }
 
 bool Station::operator==(const Station &other) const
 {
-  return getIP() == other.getIP() && getMAC() == other.getMAC() && getName() == other.getName();
+  return get_ip() == other.get_ip() && get_mac() == other.get_mac() && get_name() == other.get_name();
 }
 
 std::string Station::to_string() const
 {
-  return "Station(\n\tName : " + getName() + ",\n\tMAC : " + getMAC().to_string() + ",\n\tIP : " + getIP().to_string() + "\n)";
+  return "Station(\n\tName : " + get_name() + ",\n\tMAC : " + get_mac().to_string() + ",\n\tIP : " + get_ip().to_string() + "\n)";
 }
