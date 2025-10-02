@@ -5,3 +5,6 @@ build/*
 
 # CLion files
 .idea/
+
+# clang cache
+/.cache/
