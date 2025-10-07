@@ -1,9 +1,9 @@
 # Net-CPP
 
-🇫🇷 
+🇫🇷 \
 - Net-CPP, simulation de réseau écrit en C++
-\
-🇬🇧 
+
+🇬🇧 \
 - Net-CPP, network simulation written in C++
 
 # Description

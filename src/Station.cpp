@@ -14,13 +14,6 @@ void Station::set_ip(const IP &ip)
   ip_ = ip;
 }
 
-/*
-const std::string& Node::getName() const 
-{
-  return name_;
-}
-*/ 
-
 const MAC& Station::get_mac() const 
 {
   return mac_;

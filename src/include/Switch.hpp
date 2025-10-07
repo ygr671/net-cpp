@@ -7,5 +7,5 @@
 class Switch : Node
 {
 private:
-  std::vector<SwitchingTableEntry> entries_;
+public:
 };
