@@ -8,3 +8,7 @@ build/*
 
 # clang cache
 /.cache/
+
+# PlantUML generated files
+!uml/net-cpp.puml
+uml/*
