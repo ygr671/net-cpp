@@ -10,5 +10,4 @@ build/*
 /.cache/
 
 # PlantUML generated files
-!uml/net-cpp.puml
-uml/*
+uml/*.png

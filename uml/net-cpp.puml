@@ -1,0 +1,127 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+skinparam style strictuml
+hide empty members
+
+class main
+{
+    + main(argc : Integer, argv : String[*]) : Integer
+}
+
+package netcpp
+{
+
+
+    package core
+    {
+
+    }
+
+    package network
+    {
+        class IP
+        {
+            - address_ : String
+            - mask_ : String
+
+            + <<create>> IP(addr : String, mask : String)
+            + get_address() : String
+            + get_mask() : String
+            + operator==(other : IP) : Boolean
+            + to_string() : String
+        }
+
+        class MAC
+        {
+            - address_ : String
+
+            + <<create>> MAC(addr : String)
+            + get() : String
+            + operator==(other : MAC) : Boolean
+            ' + operator<<() TODO : idk ?
+            + to_string() : String
+        }
+
+        class Switch extends netcpp.utils.Node
+        {
+            + <<create>> Switch()
+            + comutate(frame : Frame, dst : MAC)
+        }
+
+        class Station extends netcpp.utils.Node
+        {
+
+        }
+
+        class Frame
+        {
+
+        }
+
+        class Network
+        {
+
+        }
+
+        class SwitchingTable
+        {
+            + <<create>> SwitchingTable()
+            + get(index : Integer) : SwitchingTableEntry
+            + operator[](index : Integer) : SwitchingTableEntry
+            + remove_entry(entry : SwitchingTableEntry)
+            + remove_entry(entry : Integer)
+        }
+
+        class SwitchingTableEntry
+        {
+            + <<create>> SwitchingTableEntry(mac : String, addr : String, mask : String)
+            + get_mac() : MAC
+            + get_ip() : IP
+            + operator==(other : SwicthingTableEntry) : Boolean
+            + to_string() : String
+        }
+    }
+
+    package utils
+    {
+        class Link
+        {
+
+        }
+
+        abstract class Node
+        {
+            + <<create>> Node(mac : MAC, name : String)
+            + <<abstract>> get_mac() : MAC
+            + <<abstract>> get_name() : String
+            + operator==(other : Node) : Boolean
+            + <<abstract>> to_string() : String
+        }
+    }
+
+}
+
+' Uses
+
+
+' IP & MAC links
+Frame "1" *--> "1..1\n src_" MAC: belongs to >
+Frame "1" *--> "1..1\n dst_" MAC: belongs to >
+
+Node "1" *--> "1..1\n ip_" IP: belongs to >
+Node "1" *--> "1..1\n mac_" MAC: belongs to >
+
+' Switch compositions
+Switch "1" *--> "1..1\n - table_" SwitchingTable: belongs to >
+SwitchingTable "1" *--> "0..*\n - entries_" SwitchingTableEntry: belongs to >
+
+' Switching table entries compositions
+SwitchingTableEntry "1" o--> "1..1 - _mac" MAC: belongs to >
+SwitchingTableEntry "1" o--> "1..1 - _ip" IP: belongs to >
+
+' Node link with Link
+Node "1" *--> "0..*\n - links_" Link: belongs to >
+
+@enduml
