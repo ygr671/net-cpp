@@ -1,9 +1,10 @@
 #pragma once
 
+#include "ToString.hpp"
 #include <string>
 #include <iosfwd>
 
-class MAC
+class MAC : public ToString
 {
 private:
   std::string address_;

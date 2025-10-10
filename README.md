@@ -24,7 +24,7 @@ Placeholder
 
 # Technologies / Stack
 
-- C++17
+- C++20
 - CMake
 - Standard Template Library
 

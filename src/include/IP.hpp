@@ -2,17 +2,21 @@
  * @file IP.hpp
  * @brief Defines the IP class representing an IP address and subnet mask.
  * @author
+*/
+#pragma once
+
+#include "ToString.hpp"
+#include <string>
+#include <iosfwd>
+
+/**
  * @class IP
  * @brief Used to represent an IP address.
  *
  * This class is used to represent an IP address using the address itself and its subnet mask
 */
-#pragma once
 
-#include <string>
-#include <iosfwd>
-
-class IP 
+class IP : public ToString
 {
 private:
   /// IP Address
