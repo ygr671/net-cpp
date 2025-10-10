@@ -1,11 +1,7 @@
 #pragma once
 
 #include "Node.hpp"
-#include <string>
 
-
-class Switch : Node
+class Switch : public Node
 {
-private:
-public:
 };

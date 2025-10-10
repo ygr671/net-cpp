@@ -1,0 +1,44 @@
+\hypertarget{src_2examples_2ip_usage_8cpp-example}{}\doxysection{src/examples/ip\+\_\+usage.\+cpp}
+Ctor.
+
+Ctor.
+\begin{DoxyParams}{Parameters}
+{\em addr} & \mbox{\hyperlink{classIP}{IP}} address \\
+\hline
+{\em mask} & Subnet mask\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}../include/IP.hpp"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{ip__usage_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{comment}{// Create an IP object}}
+\DoxyCodeLine{  \mbox{\hyperlink{classIP}{IP}} ip(\textcolor{stringliteral}{"{}127.0.0.1"{}}, \textcolor{stringliteral}{"{}32"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{// get() method showcase}}
+\DoxyCodeLine{  std::cout << ip.\mbox{\hyperlink{classIP_a8a56b77967ece86b4903febeb0d5235a}{get}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}}; \textcolor{comment}{// -\/> "{}127.0.0.1/32"{}}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{comment}{// get\_address() method showcase}}
+\DoxyCodeLine{  std::cout << ip.\mbox{\hyperlink{classIP_ae702647745ed10c925ef32c6f9500d52}{get\_address}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}}; \textcolor{comment}{// -\/> "{}127.0.0.1"{}}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{comment}{// get\_mask() method showcase}}
+\DoxyCodeLine{  std::cout << ip.\mbox{\hyperlink{classIP_a2a31c0f5dcbe46bc7096bdbde8db9859}{get\_mask}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}}; \textcolor{comment}{// -\/> "{}32"{}}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{comment}{// operator== overloading showcase}}
+\DoxyCodeLine{  \mbox{\hyperlink{classIP}{IP}} other\_ip(\textcolor{stringliteral}{"{}192.168.0.1"{}}, \textcolor{stringliteral}{"{}32"{}});}
+\DoxyCodeLine{  std::cout << ((ip == other\_ip) ? \textcolor{stringliteral}{"{}true"{}} : \textcolor{stringliteral}{"{}false"{}}) << \textcolor{stringliteral}{"{}\(\backslash\)n"{}}; \textcolor{comment}{// -\/> false}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{comment}{// to\_string() method showcase}}
+\DoxyCodeLine{  std::string result = ip.\mbox{\hyperlink{classIP_a3da32c8396f1f6463822ddecc6a309a7}{to\_string}}(); \textcolor{comment}{// -\/> IP(address\_ : "{}127.0.0.1"{}, mask\_ : "{}32"{})}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{comment}{// operator<< overloading showcase}}
+\DoxyCodeLine{  std::cout << ip << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

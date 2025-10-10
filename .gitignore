@@ -11,3 +11,6 @@ build/*
 
 # PlantUML generated files
 uml/*.png
+
+# Doxygen 
+docs/*

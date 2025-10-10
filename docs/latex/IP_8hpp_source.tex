@@ -1,0 +1,28 @@
+\hypertarget{IP_8hpp_source}{}\doxysection{IP.\+hpp}
+\label{IP_8hpp_source}\index{src/include/IP.hpp@{src/include/IP.hpp}}
+\mbox{\hyperlink{IP_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00010}00010 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00012}00012 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00013}00013 \textcolor{preprocessor}{\#include <iosfwd>}}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00015}\mbox{\hyperlink{classIP}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classIP}{IP}} }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00017}00017 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00019}\mbox{\hyperlink{classIP_a04ab62b01f4568553cfe8c1064346b44}{00019}}   std::string \mbox{\hyperlink{classIP_a04ab62b01f4568553cfe8c1064346b44}{address\_}};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00021}\mbox{\hyperlink{classIP_a9bf56527311305730f4a0f4ce56433b7}{00021}}   std::string \mbox{\hyperlink{classIP_a9bf56527311305730f4a0f4ce56433b7}{mask\_}};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00022}00022 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00029}\mbox{\hyperlink{classIP_a79723a1c001f20d1ad042e0f04ac45d5}{00029}}   \mbox{\hyperlink{classIP_a79723a1c001f20d1ad042e0f04ac45d5}{IP}}(\textcolor{keyword}{const} std::string\& addr, \textcolor{keyword}{const} std::string\& mask);}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00030}00030   }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00036}\mbox{\hyperlink{classIP_a8a56b77967ece86b4903febeb0d5235a}{00036}}   std::string \mbox{\hyperlink{classIP_a8a56b77967ece86b4903febeb0d5235a}{get}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00042}\mbox{\hyperlink{classIP_ae702647745ed10c925ef32c6f9500d52}{00042}}   \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classIP_ae702647745ed10c925ef32c6f9500d52}{get\_address}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00048}\mbox{\hyperlink{classIP_a2a31c0f5dcbe46bc7096bdbde8db9859}{00048}}   \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classIP_a2a31c0f5dcbe46bc7096bdbde8db9859}{get\_mask}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00055}\mbox{\hyperlink{classIP_a2eb212da0c53f8b8cebb934382bb2243}{00055}}   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classIP_a2eb212da0c53f8b8cebb934382bb2243}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classIP}{IP}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00061}\mbox{\hyperlink{classIP_a3da32c8396f1f6463822ddecc6a309a7}{00061}}   std::string \mbox{\hyperlink{classIP_a3da32c8396f1f6463822ddecc6a309a7}{to\_string}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00062}00062 \};}
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{IP_8hpp_source_l00072}\mbox{\hyperlink{IP_8hpp_ab4e227fda2c6da51494960f418aade8f}{00072}} std::ostream\& \mbox{\hyperlink{IP_8hpp_ab4e227fda2c6da51494960f418aade8f}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{classIP}{IP}}\& ip);}
+
+\end{DoxyCode}
