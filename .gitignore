@@ -13,4 +13,4 @@ build/*
 uml/*.png
 
 # Doxygen 
-docs/*
+docs/
