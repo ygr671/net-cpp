@@ -1,4 +1,4 @@
-#include "../include/IP.hpp"
+#include "include/IP.hpp"
 
 #include <iostream>
 #include <exception>

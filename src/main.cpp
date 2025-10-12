@@ -1,8 +1,8 @@
 #include <iostream>
 #include <exception>
 
-#include "include/IP.hpp"
-#include "include/MAC.hpp"
+#include "network/include/IP.hpp"
+#include "network/include/MAC.hpp"
 
 int main()
 {

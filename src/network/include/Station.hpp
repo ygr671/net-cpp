@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Node.hpp"
+#include "../../core/include/Node.hpp"
 
 class Station : public Node
 {

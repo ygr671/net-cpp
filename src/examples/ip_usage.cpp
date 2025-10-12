@@ -1,4 +1,4 @@
-#include "../include/IP.hpp"
+#include "../network/include/IP.hpp"
 #include <iostream>
 
 int main()

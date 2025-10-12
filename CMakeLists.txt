@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.25)
 
 # Project name and version
 project(net-cpp VERSION 1.0 LANGUAGES CXX)
@@ -8,26 +8,23 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Name of the executable
-set(EXECUTABLE_NAME net-cpp)
+# compile_commands.json generation
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Gather all .cpp files recursively
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/src/*.cpp)
+# Modules
+add_subdirectory(src/network)
+# add_subdirectory(src/core)
+# add_subdirectory(src/utils)
 
-# Exclude example file compilation
-list(FILTER SRCS EXCLUDE REGEX "src/examples/.*\\.cpp$")
+# Optional : compile examples
+add_subdirectory(src/examples)
 
-# Create the executable
-add_executable(${EXECUTABLE_NAME} ${SRCS})
 
-# Include directories (for headers)
-target_include_directories(${EXECUTABLE_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src/include)
+# Executable
+add_executable(${PROJECT_NAME} src/main.cpp)
 
-# Set output directory for binaries
-set_target_properties(${EXECUTABLE_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+# Output binary to bin/
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
-# Optional : warnings and strict flags
-target_compile_options(${EXECUTABLE_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
-
-# Optional : enable folders in IDEs
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+# Linking libraries (core, network, utils)
+target_link_libraries(${PROJECT_NAME} PRIVATE network) #core utils)
