@@ -1,8 +1,10 @@
 # Build & CMake files
 build/*
+bin/*
 !build/.gitkeep
 !build/topologies
-
+!bin/.gitkeep
+!bin/examples/.gitkeep
 # CLion files
 .idea/
 
