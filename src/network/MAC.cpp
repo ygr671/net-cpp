@@ -1,7 +1,5 @@
 #include "include/MAC.hpp"
 
-#include <iostream>
-#include <exception>
 #include <regex>
 
 MAC::MAC(const std::string& addr) : address_(addr) 

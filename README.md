@@ -114,6 +114,8 @@ The goal is to provide a simple but extensible foundation for understanding the 
 
 🇫🇷 \
 Inspiré d'un sujet de projet d'études.
+Je remercie mon ami [vs-123](https://github.com/vs-123) de m'avoir aidé dans la coneption de ce projet.
 
 🇬🇧 \
 Inspired by a study project.
+I thank my friend [vs-123](https://github.com/vs-123) who helped me in the conception of this project.
