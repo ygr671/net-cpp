@@ -32,6 +32,8 @@ public:
   */
   IP(const std::string& addr, const std::string& mask);
   
+  // TODO : add default ctor for IP as address_ = "127.0.0.1" and mask_ = "32"
+
   /**
    * @brief Get the IP.
    * @return IP as a string.
