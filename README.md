@@ -45,7 +45,7 @@ make -j$(nproc)
 ```
 3) Exécutez
 ```bash
-./bin/net-cpp
+../bin/net-cpp
 ```
 
 🇬🇧 
@@ -62,7 +62,7 @@ make -j$(nproc)
 ```
 3) Run
 ```bash
-./bin/net-cpp
+../bin/net-cpp
 ```
 
 
@@ -71,10 +71,10 @@ make -j$(nproc)
 🇫🇷 \
 Implémentées :
 - [x] : Gestion des adresses IP et MAC
-- [x] : Classes de base : Node, Station, Switch, Link
-- [x] : Table de commutation et entrées associées
 
 À venir :
+- [ ] : Classes de base : Node, Station, Switch, Link
+- [ ] : Table de commutation et entrées associées
 - [ ] : Simulation de trame basique (Frame)
 - [ ] : Routage simplifié
 - [ ] : Affichage des logs d’échanges
